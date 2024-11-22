@@ -1,0 +1,87 @@
+.card {
+  border: 1px solid #ddd;
+  padding: 3px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 900px; /* Set a max-width for uniform size */
+}
+
+.card-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-img {
+  width: 50%;
+  object-fit: contain; /* Make sure the image fits well */
+  background-color: #f7f7f7; /* Background color in case the image is transparent */
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  width: 50%;
+}
+
+.name-description,
+.tech-stack,
+.links {
+  margin-bottom: 10px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-stack span {
+  background-color: black;
+  color: #ddd;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 4px;
+  font-size: 14px;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.link i {
+  margin-right: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  /* .card {
+    margin: 0;
+    max-width: 80%;
+  } */
+  .card-row {
+    flex-direction: column;
+  }
+
+  .card-img,
+  .info {
+    width: 100%;
+  }
+}
